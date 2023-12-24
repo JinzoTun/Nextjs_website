@@ -1,6 +1,8 @@
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { Button } from './ui/button'
 
 const Navbar = () => {
   return (
@@ -13,7 +15,7 @@ const Navbar = () => {
             <ul className='flex-center gap-x-3 max-md:hidden md:gap-x-10 '>
                 <li className='body-text text-gradient_blue-purple !font-bold'>
                     <Link href="https://vercel.com/dashboard" target='_blank'>
-                        Login
+                        Subscribe
                     </Link> 
                 </li>
                 <li className='body-text !font-normal'>
@@ -21,6 +23,17 @@ const Navbar = () => {
                         Contact me
                     </Link> 
                 </li>
+                <SignedIn>
+                    <UserButton afterSignOutUrl="/" />
+                </SignedIn>
+
+                <SignedOut>
+                    <Button asChild className="rounded-full" size="lg">
+                       <Link href="/sign-in">
+                        Login
+                        </Link>
+                    </Button>
+                </SignedOut>
             </ul>
         </div>
     </nav>
