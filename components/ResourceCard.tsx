@@ -25,7 +25,7 @@ const ResourceCard = ({ id, title, image, downloadNumber, downloadLink }: Props)
               alt={title}
             />
           </div>
-          <CardTitle className="text-white paragraph-semibold line-clamp-1 w-full text-left">{title}</CardTitle>
+          <CardTitle className="text-white paragraph-semibold line-clamp-1 w-10 text-left">{title}</CardTitle>
         </CardHeader>
       </Link>
       <CardContent className="flex-between mt-4 p-0">
