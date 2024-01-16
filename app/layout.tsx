@@ -4,8 +4,8 @@ import { ClerkProvider } from '@clerk/nextjs'
 
 
 export const metadata: Metadata = {
-  title: 'Movie Slayer',
-  description: 'watch free movies',
+  title: 'Book Slayer',
+  description: 'Download free books',
   other: {
     'theme-color': '#0d1117',
     "color-scheme": "dark only",
